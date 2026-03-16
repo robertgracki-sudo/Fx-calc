@@ -3,3 +3,4 @@ google-genai
 pillow
 openpyxl
 flask
+python-telegram-bot
