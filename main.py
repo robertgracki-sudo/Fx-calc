@@ -182,7 +182,7 @@ def handle_photo(message):
         """
         
         img = PIL.Image.open(io.BytesIO(downloaded_file))
-        response = client.models.generate_content(model="models/gemini-1.5-flash-002", contents=[prompt, img])
+        response = client.models.generate_content(model="gemini-2.0-flash", contents=[prompt, img])
         
         # Save to Journal
         new_entry = {
