@@ -37,7 +37,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'HEAD'])
 def home():
-    return "Bot Kasownik FX: Online", 200
+    return "Bot FX Calc: Online", 200
 
 def run_server():
     # Render wymaga portu 10000. Wpisujemy go na sztywno.
@@ -182,7 +182,7 @@ def handle_photo(message):
         """
         
         img = PIL.Image.open(io.BytesIO(downloaded_file))
-        response = client.models.generate_content(model="gemini-1.5-flash", contents=[prompt, img])
+        response = client.models.generate_content(model="models/gemini-1.5-flash", contents=[prompt, img])
         
         # Save to Journal
         new_entry = {
@@ -204,5 +204,5 @@ def handle_photo(message):
 # --- START ---
 if __name__ == "__main__":
     keep_alive()
-    print("Bot Kasownik is starting...")
+    print("Bot FX Calc is starting...")
     bot.infinity_polling(timeout=20, long_polling_timeout=10)
