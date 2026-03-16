@@ -1,6 +1,5 @@
 pyTelegramBotAPI
-google-genai
+google-generativeai
+flask
 pillow
 openpyxl
-flask
-python-telegram-bot
